@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <ButtonBar layoutX="300.0" layoutY="300.0" prefHeight="40.0" prefWidth="200.0">
-        <buttons>
-          <Button mnemonicParsing="false" text="Zarejestruj" />
-        </buttons>
-      </ButtonBar>
-      <ButtonBar layoutX="300.0" layoutY="260.0" prefHeight="40.0" prefWidth="200.0">
-        <buttons>
-          <Button mnemonicParsing="false" text="Zaloguj" />
-        </buttons>
-      </ButtonBar>
-      <TextField fx:id="loginTxt" layoutX="300.0" layoutY="96.0" />
-      <TextField fx:id="password" layoutX="300.0" layoutY="162.0" />
-      <Text layoutX="152.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" />
-      <Text layoutX="152.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło:" />
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
+    <ButtonBar fx:id="register" layoutX="300.0" layoutY="300.0" prefHeight="40.0" prefWidth="200.0"
+               AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="180.0">
+      <buttons>
+          <Button mnemonicParsing="false" text="Zarejestruj"/>
+      </buttons>
+    </ButtonBar>
+    <ButtonBar fx:id="login" layoutX="300.0" layoutY="260.0" onMouseClicked="#login" prefHeight="40.0" prefWidth="200.0"
+               AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="150.0">
+      <buttons>
+          <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#login" onMouseClicked="#login" text="Zaloguj"/>
+      </buttons>
+    </ButtonBar>
+    <TextField fx:id="loginTxt" layoutX="300.0" layoutY="96.0" AnchorPane.leftAnchor="80.0"
+               AnchorPane.topAnchor="30.0"/>
+    <TextField fx:id="passwordTxt" layoutX="300.0" layoutY="162.0" AnchorPane.leftAnchor="80.0"
+               AnchorPane.topAnchor="80.0"/>
+    <Text layoutX="152.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:"
+          AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="30.0"/>
+    <Text layoutX="152.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło:"
+          AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="80.0"/>
+    <Label fx:id="errorLbl" layoutX="361.0" layoutY="200.0"/>
 </AnchorPane>
