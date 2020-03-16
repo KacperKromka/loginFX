@@ -13,7 +13,7 @@ public class Controller {
     private TextField loginTxt;
 
     @FXML
-    private TextField passwordTxt;
+    private PasswordField passwordTxt;
 
     @FXML
     private Label errorLbl;
@@ -52,7 +52,7 @@ public class Controller {
                 if (rs.next()) {
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.setContentText("Zalogowano pomyślnie");
-                    alert.showAndWait();
+                    alert.show();
                 } else {
                     errorLbl.setText("Wprowadz poprawny login i hasło");
                 }
