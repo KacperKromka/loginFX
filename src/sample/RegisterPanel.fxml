@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="316.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterController">
+    <ButtonBar fx:id="register" layoutX="81.0" layoutY="262.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="262.0">
+        <buttons>
+            <Button mnemonicParsing="false" text="Zarejestruj" />
+        </buttons>
+    </ButtonBar>
+    <ButtonBar fx:id="login" layoutX="81.0" layoutY="232.0" onMouseClicked="#login" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="232.0">
+        <buttons>
+            <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#login" onMouseClicked="#login" text="Zaloguj" />
+        </buttons>
+    </ButtonBar>
+    <TextField fx:id="loginTxt" layoutX="94.0" layoutY="33.0" AnchorPane.leftAnchor="94.0" AnchorPane.topAnchor="33.0" />
+    <PasswordField fx:id="passwordTxt" layoutX="94.0" layoutY="83.0" AnchorPane.leftAnchor="94.0" AnchorPane.topAnchor="83.0" />
+    <Text layoutX="31.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="33.0" />
+    <Text layoutX="31.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło:" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="83.0" />
+    <Label fx:id="errorLbl" layoutX="361.0" layoutY="200.0" />
+   <PasswordField fx:id="passwordTxt2" layoutX="94.0" layoutY="136.0" />
+   <Text layoutX="9.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powtórz hasło:" />
+   <ChoiceBox layoutX="94.0" layoutY="188.0" prefWidth="150.0" />
+   <Text layoutX="35.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Płeć:" />
+</AnchorPane>
