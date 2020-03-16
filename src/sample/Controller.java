@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 
 import java.sql.*;
 
@@ -24,6 +25,9 @@ public class Controller {
     @FXML
     public ButtonBar register;
 
+    @FXML
+    private AnchorPane content;
+
     Connection myConnection;
     PreparedStatement myStatement = null;
     ResultSet rs = null;
@@ -31,6 +35,12 @@ public class Controller {
     public Controller()
     {
         myConnection = ConnectionDB.conDB();
+    }
+
+    @FXML
+    private void loadRegister()
+    {
+
     }
 
     @FXML

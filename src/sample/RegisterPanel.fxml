@@ -10,9 +10,9 @@
             <Button mnemonicParsing="false" text="Zarejestruj" />
         </buttons>
     </ButtonBar>
-    <ButtonBar fx:id="login" layoutX="81.0" layoutY="232.0" onMouseClicked="#login" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="232.0">
+    <ButtonBar fx:id="login" layoutX="81.0" layoutY="232.0"  prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="232.0">
         <buttons>
-            <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#login" onMouseClicked="#login" text="Zaloguj" />
+            <Button fx:id="loginBtn" mnemonicParsing="false"  text="Zaloguj" />
         </buttons>
     </ButtonBar>
     <TextField fx:id="loginTxt" layoutX="94.0" layoutY="33.0" AnchorPane.leftAnchor="94.0" AnchorPane.topAnchor="33.0" />
