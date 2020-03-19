@@ -5,14 +5,14 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="316.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterController">
-    <ButtonBar fx:id="register" layoutX="81.0" layoutY="262.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="262.0">
+    <ButtonBar layoutX="81.0" layoutY="262.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="262.0">
         <buttons>
-            <Button mnemonicParsing="false" onAction="#saveData" text="Zarejestruj" />
+            <Button fx:id="register" mnemonicParsing="false" onAction="#handleButtonEvent" text="Zarejestruj" />
         </buttons>
     </ButtonBar>
-    <ButtonBar fx:id="login" layoutX="81.0" layoutY="232.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="232.0">
+    <ButtonBar  layoutX="81.0" layoutY="232.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="232.0">
         <buttons>
-            <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#loadLogin" text="Zaloguj" />
+            <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#handleButtonEvent" text="Zaloguj" />
         </buttons>
     </ButtonBar>
     <TextField fx:id="loginTxt" layoutX="94.0" layoutY="33.0" AnchorPane.leftAnchor="94.0" AnchorPane.topAnchor="33.0" />

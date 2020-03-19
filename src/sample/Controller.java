@@ -31,10 +31,8 @@ public class Controller {
     private Button loginBtn;
 
     @FXML
-    public ButtonBar register;
+    public Button register;
 
-    @FXML
-    private AnchorPane content;
 
     Connection myConnection;
     PreparedStatement myStatement = null;
@@ -43,6 +41,12 @@ public class Controller {
     public Controller()
     {
         myConnection = ConnectionDB.conDB();
+    }
+
+    @FXML
+    private void handleButtonEvent(ActionEvent event) throws IOException {
+        if (event.getSource() == loginBtn) login();
+        if (event.getSource() == register) loadRegister(event);
     }
 
     @FXML
