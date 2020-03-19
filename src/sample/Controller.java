@@ -1,9 +1,17 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
 
 
@@ -38,8 +46,13 @@ public class Controller {
     }
 
     @FXML
-    private void loadRegister()
+    private void loadRegister(ActionEvent event) throws IOException
     {
+        URL url = getClass().getResource("RegisterPanel.fxml");
+        Parent root = FXMLLoader.load(url);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
 
     }
 
