@@ -47,6 +47,7 @@ public class RegisterController  {
 
     public RegisterController() {
         myConnection = ConnectionDB.conDB();
+        txtGender.getItems().addAll("Male","Famale");
     }
 
     @FXML
