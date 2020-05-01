@@ -3,6 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,9 +18,10 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 
-public class RegisterController  {
+public class RegisterController implements Initializable {
 
     @FXML
     private TextField loginTxt;
@@ -47,7 +49,7 @@ public class RegisterController  {
 
     public RegisterController() {
         myConnection = ConnectionDB.conDB();
-        txtGender.getItems().addAll("Male","Famale");
+
     }
 
     @FXML
@@ -97,4 +99,8 @@ public class RegisterController  {
     }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        txtGender.getItems().addAll("Male","Famale");
+    }
 }

@@ -45,7 +45,7 @@ public class Controller {
 
     @FXML
     private void handleButtonEvent(ActionEvent event) throws IOException {
-        if (event.getSource() == loginBtn) login();
+        if (event.getSource() == loginBtn) login(event);
         if (event.getSource() == register) loadRegister(event);
     }
 
@@ -57,11 +57,20 @@ public class Controller {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
-
     }
 
     @FXML
-    private void login()
+    private void loadApi(ActionEvent event) throws IOException
+    {
+        URL url = getClass().getResource("ApiPanel.fxml");
+        Parent root = FXMLLoader.load(url);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    private void login(ActionEvent event)
     {
         String login = loginTxt.getText();
         String password = passwordTxt.getText();
@@ -80,11 +89,13 @@ public class Controller {
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.setContentText("Zalogowano pomyślnie");
                     alert.show();
+                    loadApi(event);
+
                 } else {
                     errorLbl.setText("Wprowadz poprawny login i hasło");
                 }
 
-            } catch (SQLException e) {
+            } catch (SQLException | IOException e) {
                 e.printStackTrace();
             }
         }
