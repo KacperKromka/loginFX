@@ -7,8 +7,7 @@ import java.sql.SQLException;
 public class ConnectionDB {
 
 
-    public static Connection conDB()
-    {
+    public static Connection conDB() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection myConnection = DriverManager.getConnection(
@@ -17,8 +16,11 @@ public class ConnectionDB {
                     "s3cret"
             );
             return myConnection;
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
+            return null;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
             return null;
         }
     }

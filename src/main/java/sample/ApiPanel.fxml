@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="283.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SmsSender">
+    <PasswordField fx:id="textTo" layoutX="80.0" layoutY="46.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="46.0" />
+    <Text layoutX="19.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="42.05078125" />
+    <Label fx:id="errorLbl" layoutX="361.0" layoutY="200.0" />
+   <TextArea fx:id="textBody" layoutX="80.0" layoutY="86.0" prefHeight="152.0" prefWidth="149.0" />
+   <Text layoutX="14.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text:" />
+   <Button fx:id="btnSend" layoutX="287.0" layoutY="217.0" mnemonicParsing="false"  text="Send" />
+</AnchorPane>
