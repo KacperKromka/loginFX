@@ -7,15 +7,20 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-import java.awt.*;
+
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 
 public class SmsSender implements Initializable {
 
-    public static final String ACCOUNT_SID = "";
-    public static final String AUTH_TOKEN = "";
+    public static final String ACCOUNT_SID = "ACa9157a0f21ac537a5c5837c29ba32a28";
+    public static final String AUTH_TOKEN = "f64670bd4813bd559c6ec69c8b4a62c0";
     public static PhoneNumber PHONE_NUMBER = new PhoneNumber("+13342493876");
 
 
@@ -23,7 +28,7 @@ public class SmsSender implements Initializable {
     private TextField textTo;
 
     @FXML
-    private TextField textBody;
+    private TextArea textBody;
 
     @FXML
     private Label errorLbl;
@@ -31,10 +36,6 @@ public class SmsSender implements Initializable {
     @FXML
     private Button btnSend;
 
-    @FXML
-    private void handleButtonEvent(ActionEvent event,URL url, ResourceBundle resourceBundle) {
-        if(event.getSource() == btnSend) createMessage();
-    }
 
     public void createMessage() {
         String to = textTo.getText();
@@ -49,5 +50,9 @@ public class SmsSender implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Twilio.init(ACCOUNT_SID,AUTH_TOKEN);
+    }
+
+    public void handleButtonEvent(ActionEvent event) {
+        if(event.getSource() == btnSend) createMessage();
     }
 }

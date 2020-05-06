@@ -10,5 +10,9 @@
     <Label fx:id="errorLbl" layoutX="361.0" layoutY="200.0" />
    <TextArea fx:id="textBody" layoutX="80.0" layoutY="86.0" prefHeight="152.0" prefWidth="149.0" />
    <Text layoutX="14.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text:" />
-   <Button fx:id="btnSend" layoutX="287.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleButtonEvent" text="Send" />
+   <ButtonBar layoutX="155.0" layoutY="229.0" prefHeight="40.0" prefWidth="200.0">
+      <buttons>
+         <Button fx:id="btnSend" mnemonicParsing="false" onAction="#handleButtonEvent" text="Send" />
+      </buttons>
+   </ButtonBar>
 </AnchorPane>
