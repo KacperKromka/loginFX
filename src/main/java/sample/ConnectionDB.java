@@ -16,11 +16,8 @@ public class ConnectionDB {
                     "s3cret"
             );
             return myConnection;
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-            return null;
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
             return null;
         }
     }

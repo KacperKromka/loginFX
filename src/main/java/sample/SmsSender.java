@@ -19,8 +19,8 @@ import javafx.scene.control.TextField;
 
 public class SmsSender implements Initializable {
 
-    public static final String ACCOUNT_SID = "ACa9157a0f21ac537a5c5837c29ba32a28";
-    public static final String AUTH_TOKEN = "f64670bd4813bd559c6ec69c8b4a62c0";
+    public static final String ACCOUNT_SID = "";
+    public static final String AUTH_TOKEN = "";
     public static PhoneNumber PHONE_NUMBER = new PhoneNumber("+13342493876");
 
 

@@ -51,7 +51,7 @@ public class Controller {
     @FXML
     private void loadRegister(ActionEvent event) throws IOException
     {
-        URL url = getClass().getResource("RegisterPanel.fxml");
+        URL url = getClass().getResource("scenes/RegisterPanel.fxml");
         Parent root = FXMLLoader.load(url);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
@@ -61,7 +61,7 @@ public class Controller {
     @FXML
     private void loadApi(ActionEvent event) throws IOException
     {
-        URL url = getClass().getResource("ApiPanel.fxml");
+        URL url = getClass().getResource("scenes/ApiPanel.fxml");
         Parent root = FXMLLoader.load(url);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
